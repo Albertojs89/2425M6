@@ -52,7 +52,7 @@ while(intentos<3&&numeroAdivinar!=numeroIntroducido){
     const numeroIntroducido=prompt('Introduce un numero: ')
     console.log('numeroIntroducido: '+numeroIntroducido);
 
-
+    
      if(numeroIntroducido>numeroAdivinar){
         console.log('Es menor')
     }else if(numeroIntroducido<numeroAdivinar){
