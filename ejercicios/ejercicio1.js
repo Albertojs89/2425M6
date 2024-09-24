@@ -32,20 +32,20 @@ document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
     document.querySelector('#pantalla').innerHTML=entradaActual;
 })
-//CONTROL DE ERRORES----------------
-document.querySelector('btnIgual').addEventListener('click',function(){
-    try{
-       if(entradaActual!==''){
-        const resultado=eval(entradaActual);
-        document.querySelector('#pantalla').innerHTML=resultado
-       }else{
-        console.log('No hay nada que calcular');
-       } 
-    }catch(error){
-        console.log('Error en 1\'operacion:',error);
-        document.querySelector('#pantalla').innerHTML='Error';
-    }
-})
+// //CONTROL DE ERRORES----------------
+// document.querySelector('btnIgual').addEventListener('click',function(){
+//     try{
+//        if(entradaActual!==''){
+//         const resultado=eval(entradaActual);
+//         document.querySelector('#pantalla').innerHTML=resultado
+//        }else{
+//         console.log('No hay nada que calcular');
+//        } 
+//     }catch(error){
+//         console.log('Error en 1\'operacion:',error);
+//         document.querySelector('#pantalla').innerHTML='Error';
+//     }
+// })
 
 });
 
