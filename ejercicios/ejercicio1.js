@@ -30,7 +30,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 // //CONTROL DE ERRORES----------------
 // document.querySelector('btnIgual').addEventListener('click',function(){
@@ -77,7 +77,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -110,7 +110,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -143,7 +143,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -176,7 +176,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -209,7 +209,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -242,7 +242,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -275,7 +275,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -309,7 +309,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
@@ -344,7 +344,7 @@ document.querySelector('#btnIgual').addEventListener('click',function(){
 //LIMPIAR PANTALLA--------------------------------------
 document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
+    document.querySelector('#pantalla').innerHTML='0';
 })
 });
 
