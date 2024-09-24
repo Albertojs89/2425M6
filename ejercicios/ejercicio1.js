@@ -10,6 +10,8 @@ document.querySelector("#btn1").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual;
     // AFEGIR OPERADORS +- |------------------------------------------
 
+});
+
 document.querySelector('#btnSuma').addEventListener('click',function(){
     console.log('+')
     entradaActual+='+';
@@ -32,22 +34,6 @@ document.querySelector('#btnBorrar').addEventListener('click',function(){
     entradaActual='';
     document.querySelector('#pantalla').innerHTML='0';
 })
-// //CONTROL DE ERRORES----------------
-// document.querySelector('btnIgual').addEventListener('click',function(){
-//     try{
-//        if(entradaActual!==''){
-//         const resultado=eval(entradaActual);
-//         document.querySelector('#pantalla').innerHTML=resultado
-//        }else{
-//         console.log('No hay nada que calcular');
-//        } 
-//     }catch(error){
-//         console.log('Error en 1\'operacion:',error);
-//         document.querySelector('#pantalla').innerHTML='Error';
-//     }
-// })
-
-});
 
 
 
@@ -57,28 +43,7 @@ document.querySelector("#btn2").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual;
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -90,28 +55,7 @@ document.querySelector("#btn3").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual;
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -123,28 +67,7 @@ document.querySelector("#btn4").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual;
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -156,28 +79,7 @@ document.querySelector("#btn5").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -189,28 +91,7 @@ document.querySelector("#btn6").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -222,28 +103,7 @@ document.querySelector("#btn7").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -255,28 +115,7 @@ document.querySelector("#btn8").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -289,28 +128,7 @@ document.querySelector("#btn9").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
@@ -324,28 +142,7 @@ document.querySelector("#btn0").addEventListener('click',function(){
     document.querySelector('#pantalla').innerHTML=entradaActual
         // AFEGIR OPERADORS +- |------------------------------------------
 
-document.querySelector('#btnSuma').addEventListener('click',function(){
-    console.log('+')
-    entradaActual+='+';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
 
-document.querySelector('#btnResta').addEventListener('click',function(){
-    console.log('-')
-    entradaActual+='-';
-    document.querySelector('#pantalla').innerHTML=entradaActual;
-});
-
-document.querySelector('#btnIgual').addEventListener('click',function(){
-    const resultado = eval(entradaActual);
-    console.log('resul=',resultado);//testeo
-    document.querySelector('#pantalla').innerHTML=resultado;
-});
-//LIMPIAR PANTALLA--------------------------------------
-document.querySelector('#btnBorrar').addEventListener('click',function(){
-    entradaActual='';
-    document.querySelector('#pantalla').innerHTML='0';
-})
 });
 
 
