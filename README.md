@@ -2,8 +2,11 @@
 ## Sesiones
 
 - [x] Sesión 0 : Entorno de desarrollo
-- [ ] Sesión 1 : Primeros scripts
-
+- [x] Sesión 1 : Primeros scripts
+- [x] Sesión 2 : Sumar numeros, WHILE
+- [x] Sesión 3 : Document.querySelector//InnerHtml
+- [x] Sesión 4 : ARRAYS recorrer con bucles FOR
+      
 ## Ejercicios
-  - Ejercicio1:
-  - Ejercicio2:
+  - Ejercicio1: Calculadora básica
+  - Ejercicio2: Quiz
