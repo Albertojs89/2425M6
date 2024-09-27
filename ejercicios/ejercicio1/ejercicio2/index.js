@@ -58,3 +58,4 @@ document.querySelector("#answer2").innerHTML=`${quiz[numAleatorio].answers[1].te
 document.querySelector("#answer3").innerHTML=`${quiz[numAleatorio].answers[2].text}`
 document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].text}`
 
+
