@@ -147,6 +147,8 @@ document.querySelector("#btn0").addEventListener('click',function(){
 
 
 
+
+
 //Eval con el calculo = -------------------------------
 /* probando la funcion eval
 const suma=5+5
