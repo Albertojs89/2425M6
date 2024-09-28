@@ -59,3 +59,8 @@ document.querySelector("#answer3").innerHTML=`${quiz[numAleatorio].answers[2].te
 document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].text}`
 
 
+//reiniciar el boton siguiente -----------
+
+document.querySelector("#next-question").addEventListener('click',function(){
+    window.location.href="index.html";
+})
