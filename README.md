@@ -8,5 +8,5 @@
 - [x] Sesión 4 : ARRAYS recorrer con bucles FOR
       
 ## Ejercicios
-  - Ejercicio1: Calculadora básica
-  - Ejercicio2: Quiz
+  - Ejercicio1: Calculadora básica  TERMINADO
+  - Ejercicio2: Quiz          TERMINADO      
