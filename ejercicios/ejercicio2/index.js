@@ -51,12 +51,44 @@ let numAleatorio=Math.floor(Math.random()*quiz.length)
     pregunta aleatoria concatenado con la array QUIZ
 */
 
-document.querySelector("#question").innerHTML=`${quiz[numAleatorio].question}`
+document.querySelector("#question").innerHTML=`${quiz[numAleatorio].question}`;
 
 document.querySelector("#answer1").innerHTML=`${quiz[numAleatorio].answers[0].text}`
+document.querySelector("#answer1").addEventListener('click',function(){
+    if (quiz[numAleatorio].answers[0].correct==true){
+        document.querySelector("#result").innerHTML="Correcto"
+    }else{
+        document.querySelector("#result").innerHTML="Incorrecto"
+    }
+})
 document.querySelector("#answer2").innerHTML=`${quiz[numAleatorio].answers[1].text}`
+    document.querySelector("#answer2").addEventListener('click',function(){
+        if (quiz[numAleatorio].answers[1].correct==true){
+            document.querySelector("#result").innerHTML="Correcto"
+        }else{
+            document.querySelector("#result").innerHTML="Incorrecto"
+        }
+    })
 document.querySelector("#answer3").innerHTML=`${quiz[numAleatorio].answers[2].text}`
+    document.querySelector("#answer3").addEventListener('click',function(){
+        if (quiz[numAleatorio].answers[2].correct==true){
+            document.querySelector("#result").innerHTML="Correcto"
+        }else{
+            document.querySelector("#result").innerHTML="Incorrecto"
+        }
+    })
 document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].text}`
+    document.querySelector("#answer4").addEventListener('click',function(){
+        if (quiz[numAleatorio].answers[3].correct==true){
+            document.querySelector("#result").innerHTML="Correcto"
+        }else{
+            document.querySelector("#result").innerHTML="Incorrecto"
+        }
+    })
+
+
+
+
 
 
 //reiniciar el boton siguiente -----------
