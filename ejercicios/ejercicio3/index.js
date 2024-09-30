@@ -48,24 +48,22 @@ let quiz=[
 let currentPosition=0;
 let successes=0;
 let failures=0;
-var forward;
+let forward;
 
 
 
 
 // MOVER PERSONAJE---------------------------------------------------------------------
 function movePlayer(forward){
-    if(currentPosition<1){
-        currentPosition=1
-    }
-    if (forward==true){
-        currentPosition++
+    
+    if (forward===true){
+        currentPosition++;
         successes++;
-        console.log("aciertos",successes)
-    }else{
+        
+    }else if(forward===false){
         currentPosition=currentPosition-3;
         failures++;
-        console.log("fallos",failures)
+        
     }
 }
 
@@ -92,27 +90,36 @@ function generarPregunta(){
         document.querySelector("#answer2").addEventListener('click',function(){
             if (quiz[numAleatorio].answers[1].correct==true){
                 document.querySelector("#result").innerHTML="Correcto"
-                
+                forward=true
+                movePlayer(forward);
             }else{
                 document.querySelector("#result").innerHTML="Incorrecto"
-                
+                forward=false
+                movePlayer(forward);
             }
         })
     document.querySelector("#answer3").innerHTML=`${quiz[numAleatorio].answers[2].text}`
         document.querySelector("#answer3").addEventListener('click',function(){
             if (quiz[numAleatorio].answers[2].correct==true){
                 document.querySelector("#result").innerHTML="Correcto"
-                
+                forward=true
+                movePlayer(forward);
             }else{
                 document.querySelector("#result").innerHTML="Incorrecto"
+                forward=false
+                movePlayer(forward);
             }
         })
     document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].text}`
         document.querySelector("#answer4").addEventListener('click',function(){
             if (quiz[numAleatorio].answers[3].correct==true){
                 document.querySelector("#result").innerHTML="Correcto"
+                forward=true
+                movePlayer(forward);
             }else{
                 document.querySelector("#result").innerHTML="Incorrecto"
+                forward=false
+                movePlayer(forward);
             }
         })
 }
@@ -131,7 +138,12 @@ generarPregunta();
 
 document.querySelector("#next-question").addEventListener('click',function(){
     // window.location.href="index.html";
-    generarPregunta();
+    document.querySelector("#result").innerHTML="";
+    generarPregunta()
+
+    console.log("posicion actual: ",currentPosition);
+    console.log("aciertos: ",successes);
+    console.log("fallos: ",failures);
 })
 
 
@@ -141,6 +153,3 @@ document.querySelector("#next-question").addEventListener('click',function(){
 
 
 
-console.log("posicion actual: ",currentPosition);
-console.log("aciertos: ",successes);
-console.log("fallos: ",failures);
