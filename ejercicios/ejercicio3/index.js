@@ -56,6 +56,11 @@ let forward;
 // MOVER PERSONAJE---------------------------------------------------------------------
 function movePlayer(forward){
     
+   
+}
+
+// GENERAR PREGUNTA-----------------------------------------------------------------
+function generarPregunta(){
     if (forward===true){
         currentPosition++;
         successes++;
@@ -65,10 +70,6 @@ function movePlayer(forward){
         failures++;
         
     }
-}
-
-// GENERAR PREGUNTA-----------------------------------------------------------------
-function generarPregunta(){
     let numAleatorio=Math.floor(Math.random()*quiz.length)
     document.querySelector("#question").innerHTML=`${quiz[numAleatorio].question}`;
 
@@ -137,13 +138,15 @@ generarPregunta();
 //reiniciar el boton siguiente -----------
 
 document.querySelector("#next-question").addEventListener('click',function(){
-    // window.location.href="index.html";
+    // window.location.href="index.html";  no valida, recarga de 0
     document.querySelector("#result").innerHTML="";
     generarPregunta()
 
     console.log("posicion actual: ",currentPosition);
     console.log("aciertos: ",successes);
     console.log("fallos: ",failures);
+
+    console.log("ESTA ES MI POSICION",currentPosition);
 })
 
 
