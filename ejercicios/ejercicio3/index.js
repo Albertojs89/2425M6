@@ -43,48 +43,77 @@ let quiz=[
     un numero de la array aleatorio
 */
 
-let numAleatorio=Math.floor(Math.random()*quiz.length)
+let currentPosition=0;
+let successes=0;
+let failures=0;
+let forward=true;
 
-/* 
-    cogemos de la id question, insertamos el html y entre `` modificamos
-    el html, poniendo la variable quiz y entre corchetes la variable
-    pregunta aleatoria concatenado con la array QUIZ
-*/
 
-document.querySelector("#question").innerHTML=`${quiz[numAleatorio].question}`;
 
-document.querySelector("#answer1").innerHTML=`${quiz[numAleatorio].answers[0].text}`
-document.querySelector("#answer1").addEventListener('click',function(){
+
+// MOVER PERSONAJE---------------------------------------------------------------------
+function movePlayer(){
+    if(currentPosition<1){
+        currentPosition=1
+    }
+    if (forward==true){
+        currentPosition++
+    }else{
+        currentPosition=currentPosition-3;
+    }
+}
+
+// GENERAR PREGUNTA-----------------------------------------------------------------
+function generarPregunta(){
+    let numAleatorio=Math.floor(Math.random()*quiz.length)
+    document.querySelector("#question").innerHTML=`${quiz[numAleatorio].question}`;
+
+    
+    document.querySelector("#answer1").innerHTML=`${quiz[numAleatorio].answers[0].text}`
+    document.querySelector("#answer1").addEventListener('click',function(){
     if (quiz[numAleatorio].answers[0].correct==true){
         document.querySelector("#result").innerHTML="Correcto"
+        forward=true
+        movePlayer(forward);
     }else{
         document.querySelector("#result").innerHTML="Incorrecto"
+        forward=false
+        movePlayer(forward);
     }
-})
-document.querySelector("#answer2").innerHTML=`${quiz[numAleatorio].answers[1].text}`
-    document.querySelector("#answer2").addEventListener('click',function(){
-        if (quiz[numAleatorio].answers[1].correct==true){
-            document.querySelector("#result").innerHTML="Correcto"
-        }else{
-            document.querySelector("#result").innerHTML="Incorrecto"
-        }
     })
-document.querySelector("#answer3").innerHTML=`${quiz[numAleatorio].answers[2].text}`
-    document.querySelector("#answer3").addEventListener('click',function(){
-        if (quiz[numAleatorio].answers[2].correct==true){
-            document.querySelector("#result").innerHTML="Correcto"
-        }else{
-            document.querySelector("#result").innerHTML="Incorrecto"
-        }
-    })
-document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].text}`
-    document.querySelector("#answer4").addEventListener('click',function(){
-        if (quiz[numAleatorio].answers[3].correct==true){
-            document.querySelector("#result").innerHTML="Correcto"
-        }else{
-            document.querySelector("#result").innerHTML="Incorrecto"
-        }
-    })
+    document.querySelector("#answer2").innerHTML=`${quiz[numAleatorio].answers[1].text}`
+        document.querySelector("#answer2").addEventListener('click',function(){
+            if (quiz[numAleatorio].answers[1].correct==true){
+                document.querySelector("#result").innerHTML="Correcto"
+                
+            }else{
+                document.querySelector("#result").innerHTML="Incorrecto"
+                
+            }
+        })
+    document.querySelector("#answer3").innerHTML=`${quiz[numAleatorio].answers[2].text}`
+        document.querySelector("#answer3").addEventListener('click',function(){
+            if (quiz[numAleatorio].answers[2].correct==true){
+                document.querySelector("#result").innerHTML="Correcto"
+                
+            }else{
+                document.querySelector("#result").innerHTML="Incorrecto"
+            }
+        })
+    document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].text}`
+        document.querySelector("#answer4").addEventListener('click',function(){
+            if (quiz[numAleatorio].answers[3].correct==true){
+                document.querySelector("#result").innerHTML="Correcto"
+            }else{
+                document.querySelector("#result").innerHTML="Incorrecto"
+            }
+        })
+}
+
+
+generarPregunta();
+
+
 
 
 
@@ -94,5 +123,21 @@ document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].te
 //reiniciar el boton siguiente -----------
 
 document.querySelector("#next-question").addEventListener('click',function(){
-    window.location.href="index.html";
+    // window.location.href="index.html";
+    generarPregunta();
 })
+
+
+//Definir las variables: posicion, aciertos, fallos
+
+
+
+//creacion de la funcion para mover el jugador o retroceder
+
+
+
+
+
+console.log("posicion actual: ",currentPosition);
+console.log("aciertos: ",successes);
+console.log("fallos: ",failures);
