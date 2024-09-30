@@ -43,23 +43,29 @@ let quiz=[
     un numero de la array aleatorio
 */
 
+
+//Definir las variables: posicion, aciertos, fallos
 let currentPosition=0;
 let successes=0;
 let failures=0;
-let forward=true;
+var forward;
 
 
 
 
 // MOVER PERSONAJE---------------------------------------------------------------------
-function movePlayer(){
+function movePlayer(forward){
     if(currentPosition<1){
         currentPosition=1
     }
     if (forward==true){
         currentPosition++
+        successes++;
+        console.log("aciertos",successes)
     }else{
         currentPosition=currentPosition-3;
+        failures++;
+        console.log("fallos",failures)
     }
 }
 
@@ -68,8 +74,9 @@ function generarPregunta(){
     let numAleatorio=Math.floor(Math.random()*quiz.length)
     document.querySelector("#question").innerHTML=`${quiz[numAleatorio].question}`;
 
-    
+
     document.querySelector("#answer1").innerHTML=`${quiz[numAleatorio].answers[0].text}`
+    
     document.querySelector("#answer1").addEventListener('click',function(){
     if (quiz[numAleatorio].answers[0].correct==true){
         document.querySelector("#result").innerHTML="Correcto"
@@ -128,11 +135,7 @@ document.querySelector("#next-question").addEventListener('click',function(){
 })
 
 
-//Definir las variables: posicion, aciertos, fallos
 
-
-
-//creacion de la funcion para mover el jugador o retroceder
 
 
 
