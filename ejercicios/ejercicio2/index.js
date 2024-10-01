@@ -42,7 +42,8 @@ let quiz=[
     Math.floor lo redondea--- de manera que en preguntaaleatoria nos queda
     un numero de la array aleatorio
 */
-
+function generarPregunta(){
+    
 let numAleatorio=Math.floor(Math.random()*quiz.length)
 
 /* 
@@ -87,12 +88,14 @@ document.querySelector("#answer4").innerHTML=`${quiz[numAleatorio].answers[3].te
     })
 
 
+}
 
 
-
+generarPregunta();
 
 //reiniciar el boton siguiente -----------
 
 document.querySelector("#next-question").addEventListener('click',function(){
-    window.location.href="index.html";
+    document.querySelector("#result").innerHTML="";
+    generarPregunta()
 })
