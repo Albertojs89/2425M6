@@ -48,30 +48,36 @@ let quiz=[
 let currentPosition=0;
 let successes=0;
 let failures=0;
-let forward=false;
+let forward;
 let numAleatorio;
-
+let onoff=false
  const casillas=document.querySelectorAll('.div')
 
 
 // MOVER PERSONAJE---------------------------------------------------------------------
 function movePlayer(forward){
-    // console.log('forward', forward)
+    //Creamos la funcion moveplayer basada en la variable booleana forward, que nos dirá si es cierto o no
 
     if (forward===true){
         currentPosition++;
         successes++;
+        //Definimos que si acertamos vaya pintando la posicion actual
         casillas[currentPosition].classList.add('div-point')
         
     }else if(forward===false){
         currentPosition=currentPosition-3;
         failures++;
+        
+        //Y en un bucle decimos que desde la posicion actual hasta el final deshaga pintado
+        for(let i=currentPosition;i!=20;i++){
+            casillas[i].classList.remove('div-point')
+            casillas[i].classList.add('div')
+        }
+        //Finalmente volvemos a pintar nuestra posicion actual->
+        casillas[currentPosition].classList.add('div-point')
         if(currentPosition<1){
             currentPosition=1;
         }
-        casillas[currentPosition].classList.remove('div-point')
-        casillas[currentPosition].classList.add('div')
-        
         
         
     }
@@ -94,31 +100,55 @@ function generarPregunta(){
 }
 
 function comprobarFinal(){
-    if(currentPosition==20){
+    if(currentPosition==19){
         console.log('HAS LLEGADO A LA CASILLA 20, FELICIDADES!')
         document.querySelector("#result").innerHTML="HAS GANADO"
         const botonOff=document.querySelector("#next-question");
         botonOff.disabled=true;
+        
+            const textoFinal = document.querySelector("#result");
+        
+            // Cambiar estilo del texto final, cogiendolo de la clase result
+            textoFinal.style.color = "blue";          
+            textoFinal.style.fontSize = "60px";       
+            textoFinal.style.fontWeight = "bold";    
+            textoFinal.style.backgroundColor = "yellow"; 
+        
     }
 }
-    
+
+
 generarPregunta();
 
+
+//Bloqueamos preguntas una vez hagamos click:---
+document.querySelector('#answers').addEventListener('click',function(){
+    document.querySelector("#answer1").disabled = true;
+    document.querySelector("#answer2").disabled = true;
+    document.querySelector("#answer3").disabled = true;
+    document.querySelector("#answer4").disabled = true;
+})
+
+
 document.querySelector("#answer1").addEventListener('click',function(){
-    
     if (quiz[numAleatorio].answers[0].correct==true){
         document.querySelector("#result").innerHTML="Correcto"
         forward=true
         movePlayer(forward);
+        
     }else{
         document.querySelector("#result").innerHTML="Incorrecto"
         forward=false
         movePlayer(forward);
     }
+    
+   
 })
     
         
 document.querySelector("#answer2").addEventListener('click',function(){
+        // onoff=true;
+        // block(onoff);
         if (quiz[numAleatorio].answers[1].correct==true){
             document.querySelector("#result").innerHTML="Correcto"
             forward=true
@@ -128,10 +158,13 @@ document.querySelector("#answer2").addEventListener('click',function(){
             forward=false
             movePlayer(forward);
         }
+        
 })
     
         
 document.querySelector("#answer3").addEventListener('click',function(){
+        // onoff=true;
+        // block(onoff);
         if (quiz[numAleatorio].answers[2].correct==true){
             document.querySelector("#result").innerHTML="Correcto"
             forward=true
@@ -144,6 +177,8 @@ document.querySelector("#answer3").addEventListener('click',function(){
 })
     
 document.querySelector("#answer4").addEventListener('click',function(){
+        // onoff=true;
+        // block(onoff);
         if (quiz[numAleatorio].answers[3].correct==true){
             document.querySelector("#result").innerHTML="Correcto"
             forward=true
@@ -173,6 +208,13 @@ document.querySelector("#next-question").addEventListener('click',function(){
     if(currentPosition<1){
         currentPosition=1;
     }
+    
+    //REINICIAMOS EL BLOCK DE LAS RESPUESTAS
+    document.querySelector("#answer1").disabled = false;
+    document.querySelector("#answer2").disabled = false;
+    document.querySelector("#answer3").disabled = false;
+    document.querySelector("#answer4").disabled = false;
+    
     //Borramos el resultado para que no se vea nada
     document.querySelector("#result").innerHTML="";
     //Volvemos a llamar a la funcion generarPregunta y comprobamos si hemos ganado:
