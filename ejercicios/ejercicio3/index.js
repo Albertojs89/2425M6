@@ -1,4 +1,4 @@
-console.log("hola")
+console.log("Quiz con juego de mesa")
 
 
 
@@ -50,7 +50,7 @@ let successes=0;
 let failures=0;
 let forward;
 let numAleatorio;
-let onoff=false
+
  const casillas=document.querySelectorAll('.div')
 
 
@@ -67,21 +67,23 @@ function movePlayer(forward){
     }else if(forward===false){
         currentPosition=currentPosition-3;
         failures++;
-        
+        if(currentPosition<1){
+            currentPosition=0;
+        }
         //Y en un bucle decimos que desde la posicion actual hasta el final deshaga pintado
-        for(let i=currentPosition;i!=20;i++){
+        for(let i=currentPosition;i!=19;i++){
             casillas[i].classList.remove('div-point')
             casillas[i].classList.add('div')
         }
         //Finalmente volvemos a pintar nuestra posicion actual->
         casillas[currentPosition].classList.add('div-point')
-        if(currentPosition<1){
-            currentPosition=1;
-        }
+       
         
         
     }
 }
+
+
 
 // GENERAR PREGUNTA-----------------------------------------------------------------
 function generarPregunta(){
@@ -113,15 +115,16 @@ function comprobarFinal(){
             textoFinal.style.fontSize = "60px";       
             textoFinal.style.fontWeight = "bold";    
             textoFinal.style.backgroundColor = "yellow"; 
-        
+
+            
     }
 }
 
-
+//GENERAMOS LA FUNCION GENERAR PREGUNTA-----------------------
 generarPregunta();
 
 
-//Bloqueamos preguntas una vez hagamos click:---
+//Bloqueamos preguntas una vez hagamos click:-------------------------
 document.querySelector('#answers').addEventListener('click',function(){
     document.querySelector("#answer1").disabled = true;
     document.querySelector("#answer2").disabled = true;
@@ -130,6 +133,7 @@ document.querySelector('#answers').addEventListener('click',function(){
 })
 
 
+//estos son los escuchadores de eventos en los botones de las respuestas-------------------------------------------------------------------
 document.querySelector("#answer1").addEventListener('click',function(){
     if (quiz[numAleatorio].answers[0].correct==true){
         document.querySelector("#result").innerHTML="Correcto"
@@ -190,6 +194,7 @@ document.querySelector("#answer4").addEventListener('click',function(){
         }
 })
 
+//---------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -200,13 +205,12 @@ document.querySelector("#answer4").addEventListener('click',function(){
 
 
 
-
-//reiniciar el boton siguiente -----------
+//reiniciar el boton siguiente --------------------------------------------------------
 
 document.querySelector("#next-question").addEventListener('click',function(){
     //Control de error: La posición no baja del 1
     if(currentPosition<1){
-        currentPosition=1;
+        currentPosition=0;
     }
     
     //REINICIAMOS EL BLOCK DE LAS RESPUESTAS
