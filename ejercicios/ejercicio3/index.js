@@ -124,7 +124,7 @@ function comprobarFinal(){
 generarPregunta();
 
 
-//Bloqueamos preguntas una vez hagamos click:-------------------------
+//Dejamos desbloqueadas  las preguntas una vez hagamos click:-------------------------
 document.querySelector('#answers').addEventListener('click',function(){
     document.querySelector("#answer1").disabled = true;
     document.querySelector("#answer2").disabled = true;
@@ -213,7 +213,7 @@ document.querySelector("#next-question").addEventListener('click',function(){
         currentPosition=0;
     }
     
-    //REINICIAMOS EL BLOCK DE LAS RESPUESTAS
+    //REINICIAMOS EL BLOCK DE LAS RESPUESTAS y las bloqueamos para la siguiente pregunta--------------------
     document.querySelector("#answer1").disabled = false;
     document.querySelector("#answer2").disabled = false;
     document.querySelector("#answer3").disabled = false;
