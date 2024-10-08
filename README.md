@@ -10,4 +10,5 @@
 ## Ejercicios
   - Ejercicio1: Calculadora básica  TERMINADO
   - Ejercicio2: Quiz          TERMINADO
-  - Ejercicio3: Juego de mesa con preguntas     TRABAJANDO
+  - Ejercicio3: Juego de mesa con preguntas     TERMINADO
+  - Ejercicio4: Ficha               TRABAJANDO
