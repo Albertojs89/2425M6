@@ -1,7 +1,6 @@
 console.log("Hola")
 
-
-
+//FUNCION PARA CREAR FECHA Y GUARDAR SUS VALORES
 
 function crearFicha(){
     event.preventDefault(); //evita que se recargue la pagina
