@@ -52,8 +52,8 @@ function pintarTabla(){
    bd.push(usuario);
     for(let i=0;i<bd.length;i++){
         // console.log("Array:",bd[i].nombre)
-        bd+`
-            <tr id="user">
+        bd=`
+            <tr>
               <td>1</td>
               <td>${bd[i].foto}</td>
               <td>${bd[i].nombre}</td>
@@ -62,9 +62,11 @@ function pintarTabla(){
             </tr>
         `
    }
-   document.querySelector('#user').innerHTML=bd
+   console.log(bd)
+   document.querySelector('#user').innerHTML+=bd
 }
-
+//Un = lo elimina
+//+= lo acumula
 document.querySelector(".btn").addEventListener("click",function(event){
     event.preventDefault();
     crearFicha();
