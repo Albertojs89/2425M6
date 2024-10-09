@@ -18,7 +18,7 @@ let bd=[
 //OBJETO CON LOS VALORES INTRODUCIDOS EN LA FICHA:
 
 let usuario={}
-console.log(bd)
+
 
 
 //FUNCION PARA CREAR FECHA Y GUARDAR SUS VALORES
@@ -53,7 +53,7 @@ function pintarTabla(){
     for(let i=0;i<bd.length;i++){
         // console.log("Array:",bd[i].nombre)
         bd+`
-            <tr>
+            <tr id="user">
               <td>1</td>
               <td>${bd[i].foto}</td>
               <td>${bd[i].nombre}</td>
