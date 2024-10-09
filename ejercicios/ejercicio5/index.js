@@ -10,13 +10,7 @@ let bd=[
         dni: 'fghj',
         foto: '',
     },
-    {
-        nombre: 'f2ghj',
-        apellido: '2fghj',
-        apellido2: 'f2ghj',
-        dni: '2fghj',
-        foto: '',
-    },
+   
 ];
 
 
@@ -45,9 +39,9 @@ function crearFicha(){
     //introducir los valores en la ficha con inner
     //seleccionamos la id nombreficha del html, e introducimos la variable de arriba
     document.querySelector("#nombreFicha").innerHTML=`${usuario.nombre} `
-    // document.querySelector("#apellidoFicha").innerHTML=`${usuario.apellido} ${usuario.apellido2}` //abrir string para dejar espacio
-    // document.querySelector("#dniFicha").innerHTML=usuario.dni
-    // document.querySelector("#urlImagen").setAttribute('src',usuario.foto);
+    document.querySelector("#apellidoFicha").innerHTML=`${usuario.apellido} ${usuario.apellido2}` //abrir string para dejar espacio
+    document.querySelector("#dniFicha").innerHTML=usuario.dni
+    document.querySelector("#urlImagen").setAttribute('src',usuario.foto);
 
     //seleccionamos la id de urlimagen, y con setattribute->establece o modifica el atributo
 }
@@ -57,8 +51,18 @@ function crearFicha(){
 function pintarTabla(){
    bd.push(usuario);
     for(let i=0;i<bd.length;i++){
-        console.log("Array:",bd[i].nombre)
+        // console.log("Array:",bd[i].nombre)
+        bd+`
+            <tr>
+              <td>1</td>
+              <td>${bd[i].foto}</td>
+              <td>${bd[i].nombre}</td>
+              <td>${bd[i].apellido+apellido2}</td>
+              <td>${bd[i].dni}</td>
+            </tr>
+        `
    }
+   document.querySelector('#user').innerHTML=bd
 }
 
 document.querySelector(".btn").addEventListener("click",function(event){
