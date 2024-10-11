@@ -4,10 +4,10 @@ console.log("Hola")
 
 let bd=[
     {
-        nombre: 'fghj',
-        apellido: 'fghj',
-        apellido2: 'fghj',
-        dni: 'fghj',
+        nombre: '',
+        apellido: '',
+        apellido2: '',
+        dni: '',
         foto: '',
     },
    
@@ -34,7 +34,7 @@ function crearFicha(){
     usuario.dni = document.querySelector("#dni").value;
     
     usuario.foto = document.querySelector("#imagen").value;
-    console.log(usuario)
+    
 
     //introducir los valores en la ficha con inner
     //seleccionamos la id nombreficha del html, e introducimos la variable de arriba
@@ -47,26 +47,30 @@ function crearFicha(){
 }
 
 //FUNCION PINTAR TABLA CON LOS DATOS DE LA ARRAY
+let filas='';
 
 function pintarTabla(){
-   bd.push();
+   bd.push(usuario);
     for(let i=0;i<bd.length;i++){
         // console.log("Array:",bd[i].nombre)
-        bd=`
+        
+        filas=`
         <tbody id="user">
             <tr>
               <td>1</td>
-              <td>${bd[i].foto}</td>
+              <td><img id="urlImagen" src="${bd[i].foto}" class="card-img-top" alt="..."></td>
               <td>${bd[i].nombre}</td>
-              <td>${bd[i].apellido}+${bd[i].apellido2}</td>
+              <td>${bd[i].apellido} ${bd[i].apellido2}</td>
               <td>${bd[i].dni}</td>
             </tr>
         </tbody>
         `
    }
-   console.log(bd)
-   document.querySelector('#user').innerHTML+=bd
+   
+   
+   document.querySelector('#user').innerHTML+=filas
 }
+
 //Un = lo elimina
 //+= lo acumula
 document.querySelector(".btn").addEventListener("click",function(event){
