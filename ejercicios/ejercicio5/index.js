@@ -49,17 +49,19 @@ function crearFicha(){
 //FUNCION PINTAR TABLA CON LOS DATOS DE LA ARRAY
 
 function pintarTabla(){
-   bd.push(usuario);
+   bd.push();
     for(let i=0;i<bd.length;i++){
         // console.log("Array:",bd[i].nombre)
         bd=`
+        <tbody id="user">
             <tr>
               <td>1</td>
               <td>${bd[i].foto}</td>
               <td>${bd[i].nombre}</td>
-              <td>${bd[i].apellido+apellido2}</td>
+              <td>${bd[i].apellido}+${bd[i].apellido2}</td>
               <td>${bd[i].dni}</td>
             </tr>
+        </tbody>
         `
    }
    console.log(bd)
