@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios caja fuerte</title>
+</head>
+<style>
+    body{
+        width: 1300px;
+        margin: auto;
+        text-align: center;
+        background-color: beige;
+    }
+    button{
+        padding: 20px;
+        color: rgb(195, 216, 209);
+        background-color: rgb(92, 102, 121);
+        transition: transform 0.3s;
+        margin: 10px;
+    }
+    button:hover{
+        transform: scale(1.1);
+    }
+    #mensaje{
+        font-size: 80px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(54, 63, 60);
+        margin-top: 20px;
+    }
+    #mensaje2{
+        font-size: 80px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(54, 63, 60);
+        margin-top: 20px;
+    }
+    .ejer2{
+        margin-top: 300px;
+    }
+    .ejer3{
+        margin-top: 100px;
+    }
+    article{
+        border: 3px solid brown;
+        padding: 60px;
+        border-style: dotted;
+    }
+    h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 40px; 
+    }
+</style>
+<body>
+ 
+    <article class="ejer1">
+         <h1>1.Capturar clicks</h1>  
+        <button id="btn1">B1</button>
+        <button id="btn2">B2</button>
+        <button id="btn3">B3</button>
+
+        <div id="mensaje"></div>
+    </article>
+
+    <article class="ejer2">
+        <h1>Manipulació del DOM</h1>
+        <div id="miDiv">Necesito</div>
+        <div id="mensaje2"></div>
+        <button id="btn4">B4</button>
+
+    </article>
+
+    <article class="ejer3">
+        <h1>Mostrar/ocultar</h1>
+        <div id="mensaje3" style="display: none;">LO DESEO</div>
+        <button id="toggleButton">B5</button>
+
+    </article>
+
+<script src="index.js"></script>
+</body>
+</html>
