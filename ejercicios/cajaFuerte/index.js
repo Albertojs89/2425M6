@@ -78,7 +78,7 @@ document.querySelector("#btn6").addEventListener('click', function(){
 })
 
 
-//7. Recorrer un array con forEach()------------------
+//7. Recorrer un array con forEach()---------------------------
 
 let listaFrutas=["pera","manzana","plátano","uva"];
 
@@ -90,23 +90,87 @@ function recorrer(listaFrutas){
 
 recorrer(listaFrutas);
 
-// 8. Accedir a un array de dues dimensions
+// 8. Accedir a un array de dues dimensions--------------------------
 
 //crear un array de dos dimensiones con preguntas y respuestas
 let arrayPreguntasRespuestas=[
-    ["¿Cuál es la capital de Francia?", "París"],
-    ["¿Cuál es el continente más grande del mundo?", "Asia"],
-    ["¿Qué elemento químico tiene el símbolo 'O'?", "Oxígeno"]  //... añadir más preguntas y respuestas aquí.
-]
+    {pregunta:"¿Mejor videojuego de la historia?", respuesta:"Zelda"},
+    {pregunta:"¿Cuál es el mejor jugador de la historia?", respuesta:"Messi"},
+    {pregunta:"¿Que equipo es el más sucio?", respuesta:"Real Madrid"}
+    
+];
+
+//Acceder individualmente a las preguntas y respuestas
+
+console.log(arrayPreguntasRespuestas[0].pregunta);
+console.log(arrayPreguntasRespuestas[0].respuesta);
 
 
-//mostrar las preguntas en pantalla
 
 
-let preguntasDiv=document.querySelector("#pregunta");
-let respuestasDiv=document.querySelector("#respuesta");
+
+//mostrar las preguntas en pantalla con bucle FOR
+
+
+
+
 
 for(let i=0;i<arrayPreguntasRespuestas.length;i++){
+   let preguntasRespuestas=document.querySelector("#pregRes");
+
+   preguntasRespuestas.innerHTML+=`
+   <article>
+        <div id="pregunta">${arrayPreguntasRespuestas[i].pregunta};</div>
+        <div id="respuesta">${arrayPreguntasRespuestas[i].respuesta};</div>
+    </article>
    
+   
+   <br>
+   `;
 }
 
+//9. Funció per sumar dos números-------------------
+
+function suma(num1,num2){
+    return num1+num2;
+}
+
+document.querySelector("#botonSuma").addEventListener('click',function(){
+    const resultado=suma(10,20);
+    document.querySelector("#resultat").innerHTML="La Suma de 10 + 20 es: "+resultado;
+})
+
+//10. Validar una entrada buida-------------------------
+
+document.getElementById("botonValidar").addEventListener("click", function() {
+    const entrada = document.getElementById("entrada").value;
+    if (entrada === "") {
+        alert("El campo está vacío. Por favor, introduce un valor.");
+    } else {
+        alert("Entrada válida.");
+    }
+});
+
+//11. Interacció amb addEventListener()------------------
+
+document.getElementById("botonAlerta").addEventListener("click", function() {
+    alert("Dame el codigo!!");
+});
+
+
+//12. Control de flux amb if....else------------------
+
+function compararNumero(num) {
+    let resultado=document.querySelector("#textoTitulo");
+    if (num > 10) {
+        resultado.innerHTML="El número es mayor que 10";
+        console.log("El número és més gran que 10");
+    } else {
+        resultado.innerHTML="El número es menor o igual que 10";
+        console.log("El número és menor o igual a 10");
+    }
+}
+
+document.querySelector("#botonComparar").addEventListener("click", function(){
+    compararNumero(8); 
+});
