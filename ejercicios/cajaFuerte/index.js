@@ -174,3 +174,10 @@ function compararNumero(num) {
 document.querySelector("#botonComparar").addEventListener("click", function(){
     compararNumero(8); 
 });
+
+//13. Manipulació d'atributs amb getAttribute()------------------
+
+document.getElementById("mostrarSrc").addEventListener("click", function() {
+    const src = document.getElementById("imatge").getAttribute("src");
+    document.getElementById("resultat").textContent = "L'atribut src és: " + src;
+});
