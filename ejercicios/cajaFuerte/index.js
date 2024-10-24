@@ -177,7 +177,56 @@ document.querySelector("#botonComparar").addEventListener("click", function(){
 
 //13. Manipulació d'atributs amb getAttribute()------------------
 
-document.getElementById("mostrarSrc").addEventListener("click", function() {
-    const src = document.getElementById("imatge").getAttribute("src");
-    document.getElementById("resultat").textContent = "L'atribut src és: " + src;
+document.querySelector("#mostrarSrc").addEventListener("click", function() {
+    const src = document.querySelector("#imge").getAttribute("src");
+    document.querySelector("#resul").textContent = "L'atribut src és: " + src;
 });
+
+
+//14. Eliminar l'atribut amb removeAttribute()------------------
+
+document.querySelector("#eliminarAlt").addEventListener("click", function() {
+    document.querySelector("#imatge13").removeAttribute("alt");
+});
+
+//15. Mostrar numeros de forma condicional
+
+const numeros = [1, 2, 3, 4, 5, 6];
+numeros.forEach(function(num) {
+    if (num % 2 === 0) {
+        console.log(num);
+    }
+});
+
+document.querySelector("#result15").innerHTML=numeros;
+
+//Ej. Math
+
+//1. Valor absolut---------------------------------------------------
+//una funcion que reciba un numero y devuelva su valor absoluto utilizando la funcion Math.abs()
+function valorAbsolut(num) {
+    return Math.abs(num);
+   
+}
+
+// Exemple d'ús:
+console.log(valorAbsolut(-5)); 
+console.log(valorAbsolut(3));  
+
+//Signe d'un numero----------------------------------------------------
+
+function determinarSigne(num) {
+    var signe = Math.sign(num);
+    if (signe === 1) {
+        return "El número és positiu.";
+    } else if (signe === -1) {
+        return "El número és negatiu.";
+    } else {
+        return "El número és zero.";
+    }
+}
+
+// Exemple d'ús:
+console.log(determinarSigne(-10)); // Retorna "El número és negatiu."
+console.log(determinarSigne(0));   // Retorna "El número és zero."
+console.log(determinarSigne(7));   // Retorna "El número és positiu."
