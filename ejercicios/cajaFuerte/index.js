@@ -213,7 +213,7 @@ function valorAbsolut(num) {
 console.log(valorAbsolut(-5)); 
 console.log(valorAbsolut(3));  
 
-//Signe d'un numero----------------------------------------------------
+//2. Signe d'un numero----------------------------------------------------
 
 function determinarSigne(num) {
     var signe = Math.sign(num);
@@ -230,3 +230,242 @@ function determinarSigne(num) {
 console.log(determinarSigne(-10)); // Retorna "El número és negatiu."
 console.log(determinarSigne(0));   // Retorna "El número és zero."
 console.log(determinarSigne(7));   // Retorna "El número és positiu."
+
+
+// 3. Maxim de tres numeros-----------------------------------------------
+
+function trobarMaxim(a, b, c) {
+    return Math.max(a, b, c);
+}
+
+// Exemple d'ús:
+console.log(trobarMaxim(5, 10, 3)); // Retorna 10
+
+
+//4. Minim d'un array------------------------------------------------------
+
+function trobarMinim(array) {
+    return Math.min(...array);
+}
+
+// Exemple d'ús:
+console.log(trobarMinim([5, 10, 3, 8, 2])); // Retorna 2
+
+//5. Arrel quadrada-------------------------------------------------------
+
+function calcularArrelQuadrada(num) {
+    if (num >= 0) {
+        return Math.sqrt(num);
+    } else {
+        return "No es pot calcular l'arrel quadrada d'un número negatiu.";
+    }
+}
+
+// Exemple d'ús:
+console.log(calcularArrelQuadrada(16)); // Retorna 4
+console.log(calcularArrelQuadrada(-9)); // Retorna "No es pot calcular l'arrel quadrada d'un número negatiu."
+
+//6. Arrodonir un numero a l'enter més proper--------------------------------
+
+function arrodonirNumero(num) {
+    return Math.round(num);
+}
+
+// Exemple d'ús:
+console.log(arrodonirNumero(4.6)); // Retorna 5
+console.log(arrodonirNumero(4.3)); // Retorna 4
+
+//8. Arrodonir cap avall--------------------------------------------------
+
+function arrodonirCapAvall(num) {
+    return Math.floor(num);
+}
+
+// Exemple d'ús:
+console.log(arrodonirCapAvall(5.8)); // Retorna 5
+console.log(arrodonirCapAvall(2.2)); // Retorna 2
+
+
+//9. Elimintar la part decimal d'un numero---------------------------------
+
+function truncarNumero(num) {
+    return Math.trunc(num);
+}
+
+// Exemple d'ús:
+console.log(truncarNumero(6.7));   // Retorna 6
+console.log(truncarNumero(-6.7));  // Retorna -6
+
+//10. Calcular el sinus d'un angle 
+
+function calcularSinus(angleGraus) {
+    var angleRadianes = angleGraus * (Math.PI / 180);
+    return Math.sin(angleRadianes);
+}
+
+// Exemple d'ús:
+console.log(calcularSinus(30)); // Retorna 0.5
+console.log(calcularSinus(90)); // Retorna 1
+
+
+//S  T   R   I   N   G   S
+
+//1. Interpolacio de variables amb cometes obertes------------------------
+
+function interpolarVariables(nom, edat) {
+    return `El meu nom és ${nom} i tinc ${edat} anys.`;
+}
+
+// Exemple d'ús:
+console.log(interpolarVariables("Joan", 25)); // Retorna "El meu nom és Joan i tinc 25 anys."
+
+//2. ChartAt()-------------------------------------------------------------
+
+function obtenirCaracter(cadena, posicio) {
+    return cadena.charAt(posicio);
+}
+
+// Exemple d'ús:
+console.log(obtenirCaracter("Hola", 1)); // Retorna "o"
+
+//3. IndexOf()-------------------------------------------------------------
+function trobarPosicio(cadena, subcadena) {
+    return cadena.indexOf(subcadena);
+}
+
+// Exemple d'ús:
+console.log(trobarPosicio("JavaScript és genial", "genial")); // Retorna 13
+
+//4. Repeat()--------------------------------------------------------------
+function repetirCadena(cadena, vegades) {
+    return cadena.repeat(vegades);
+}
+
+// Exemple d'ús:
+console.log(repetirCadena("Hola", 3)); // Retorna "HolaHolaHola"
+
+//5. substring()-----------------------------------------------------------
+
+function obtenirSubstring(cadena, inici, fi) {
+    return cadena.substring(inici, fi);
+}
+
+// Exemple d'ús:
+console.log(obtenirSubstring("JavaScript", 0, 4)); // Retorna "Java"
+
+//6. substr()--------------------------------------------------------------
+function obtenirSubstr(cadena, inici, longitud) {
+    return cadena.substr(inici, longitud);
+}
+
+// Exemple d'ús:
+console.log(obtenirSubstr("JavaScript", 4, 6)); // Retorna "Script"
+
+//7. split()---------------------------------------------------------------
+function dividirCadena(cadena, separador) {
+    return cadena.split(separador);
+}
+
+// Exemple d'ús:
+console.log(dividirCadena("poma,pera,plàtan", ",")); // Retorna ["poma", "pera", "plàtan"]
+
+//8. startsWith()----------------------------------------------------------
+
+function comencaAmb(cadena, subcadena) {
+    return cadena.startsWith(subcadena);
+}
+
+// Exemple d'ús:
+console.log(comencaAmb("JavaScript", "Java")); // Retorna true
+
+//9. endsWith()------------------------------------------------------------
+
+function acabaAmb(cadena, subcadena) {
+    return cadena.endsWith(subcadena);
+}
+
+// Exemple d'ús:
+console.log(acabaAmb("JavaScript", "Script")); // Retorna true
+
+//10. includes()-----------------------------------------------------------
+
+function contéSubcadena(cadena, subcadena) {
+    return cadena.includes(subcadena);
+}
+
+// Exemple d'ús:
+console.log(contéSubcadena("JavaScript és genial", "genial")); // Retorna true
+
+// 11. search()------------------------------------------------------------
+
+function cercarCadena(cadena, subcadena) {
+    return cadena.search(subcadena);
+}
+
+// Exemple d'ús:
+console.log(cercarCadena("JavaScript és genial", "genial")); // Retorna 13
+
+// 13 replace()------------------------------------------------------------
+
+function substituirCadena(cadena, vellSubcadena, nouSubcadena) {
+    return cadena.replace(vellSubcadena, nouSubcadena);
+}
+
+// Exemple d'ús:
+console.log(substituirCadena("Hola món", "món", "JavaScript")); // Retorna "Hola JavaScript"
+
+//14. replaceAll()---------------------------------------------------------
+
+function substituirTotes(cadena, vellSubcadena, nouSubcadena) {
+    return cadena.replaceAll(vellSubcadena, nouSubcadena);
+}
+
+// Exemple d'ús:
+console.log(substituirTotes("Hola món, món", "món", "JavaScript")); // Retorna "Hola JavaScript, JavaScript"
+
+// S  T   R   I   N   G   S II------------------------------------------------
+
+//1. tolowerCase()----------------------------------------------------------
+function convertirMinuscules(cadena) {
+    return cadena.toLowerCase();
+}
+
+// Exemple d'ús:
+console.log(convertirMinuscules("Hola Món")); // Retorna "hola món"
+
+//2. toUpperCase()----------------------------------------------------------
+
+function convertirMajuscules(cadena) {
+    return cadena.toUpperCase();
+}
+
+// Exemple d'ús:
+console.log(convertirMajuscules("Hola Món")); // Retorna "HOLA MÓN"
+
+
+//3. trimStart()------------------------------------------------------------
+function eliminarEspaisInicials(cadena) {
+    return cadena.trimStart();
+}
+
+// Exemple d'ús:
+console.log(eliminarEspaisInicials("   Hola Món")); // Retorna "Hola Món"
+
+//4. trimEnd()--------------------------------------------------------------
+
+function eliminarEspaisFinals(cadena) {
+    return cadena.trimEnd();
+}
+
+// Exemple d'ús:
+console.log(eliminarEspaisFinals("Hola Món   ")); // Retorna "Hola Món"
+
+//5. trim()-----------------------------------------------------------------
+
+function eliminarEspaisExtrems(cadena) {
+    return cadena.trim();
+}
+
+// Exemple d'ús:
+console.log(eliminarEspaisExtrems("   Hola Món   ")); // Retorna "Hola Món"
+ 
