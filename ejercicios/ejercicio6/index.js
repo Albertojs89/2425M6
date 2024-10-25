@@ -53,7 +53,7 @@ document.querySelector("#btnMinus").addEventListener('click',function(){
 
 document.querySelector("#btnBuscar").addEventListener('click',function(){
   let palabraBusqueda=document.querySelector("#busqueda").value;
-  
+  // console.log(palabraBusqueda);
   
 
 
