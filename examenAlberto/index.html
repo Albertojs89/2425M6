@@ -215,8 +215,13 @@
       const fechaReserva = new Date();
       const fechaReservaStr = fechaReserva.toLocaleDateString() + " " + fechaReserva.toLocaleTimeString(); 
       //****las funciones new Date ,tolocaldateString y tolocaltimestring las he buscado por internet para generar la fecha y hora y representarla en cadena*****
-
-      // Crear un nuevo libro para reservar:
+    //newDate crea un objeto de fecha y hora actual
+    //tolocaldateString convierte la fecha en una cadena de texto en formato de fecha local.
+    //tolocaltimestring convierte la hora en una cadena de texto en formato de hora local.
+    //fechaReservaStr es la variable que almacena la fecha y hora en formato de cadena.
+      
+    
+    // Crear un nuevo libro para reservar:
       reservasLista.innerHTML = `
         <li class="list-group-item">
           <strong>${libro.titulo}</strong> por ${libro.autor}<br>
