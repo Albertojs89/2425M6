@@ -78,9 +78,36 @@ document.querySelector("#btnBuscar").addEventListener("click", function () {
 
   function obtenirSubstr(palabras) {
     const primeras10 = palabras.slice(0, 10);
+    /*
+    ejemplo:
+    let array = [1, 2, 3, 4, 5];
+    let subArray = array.slice(1, 3); // Resultado: [2, 3]
+
+    */
     console.log(primeras10);
+    return primeras10;
   }
 
   // Exemple d'ús:
-  document.querySelector("#resumen").innerHTML = obtenirSubstr(palabras).trim();
+  document.querySelector("#resumen").innerHTML = obtenirSubstr(palabras);
 });
+
+
+//PARTE 3  Crea un script que ens demani un nom i data de naixement en format dd/mm/aaaa
+
+
+
+document.querySelector("#convertirNombre").addEventListener("click",function(){
+  //hacemos value del contenido del input
+  //con trim le ordenamos los parametros y condiciones del txt que ponemos en el nombre
+  let nombre3=document.querySelector("#ejer3Name").value;
+  document.querySelector("#nombreConvertido").innerHTML=nombre3.trim().replace(" ","-");
+  
+})
+
+document.querySelector("#convertirFecha").addEventListener("click",function(){
+  //ahora vamos hacer lo mismo con la fecha
+  let fecha3 = document.querySelector("#convertirFecha").value.split("/");
+  console.log(fecha3);
+  // document.querySelector("#fechaConvertida").innerHTML=fecha3;
+})
