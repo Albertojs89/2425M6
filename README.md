@@ -11,4 +11,6 @@
   - Ejercicio1: Calculadora básica  TERMINADO
   - Ejercicio2: Quiz          TERMINADO
   - Ejercicio3: Juego de mesa con preguntas     TERMINADO
-  - Ejercicio4: Ficha               TRABAJANDO
+  - Ejercicio4: Ficha               TERMINADO
+  - Ejercicio5: Ficha usuario      TERMINADO
+  - Ejercicio6: Math & Strings Parte 3: TRABAJANDO
