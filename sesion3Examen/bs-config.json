@@ -1,5 +1,0 @@
-{
-  " puerto ": 8000,
-  " archivos ": [" ./src/**/*.{html,htm,css,js} "],
-  " servidor ": { " baseDir ": " ./src " }
-}
