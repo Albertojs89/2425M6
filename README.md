@@ -14,3 +14,14 @@
   - Ejercicio4: Ficha               TERMINADO
   - Ejercicio5: Ficha usuario      TERMINADO
   - Ejercicio6: Math & Strings Parte 3: TRABAJANDO
+
+
+guia instalar react --------------------------------
+
+-npm install vite@latest .
+-escojemos react
+-escojemos javascrip + swc
+-se creará src, public, ignore, etc...
+-npm install para que haga la instalacion de paquetes y cree el node.modules. Automaticamente ya guarda en .ignore los modules.
+-npm run dev : nos lanza el localhost 
+-
