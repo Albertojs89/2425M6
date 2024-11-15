@@ -1,5 +1,3 @@
-
-
 const arrayPartidas = [
   { avatar: "🐉", nick: "DragonSlayer", puntos: 9999, fecha: "2024-11-01" },
   { avatar: "🧙‍♂️", nick: "WizardMaster", puntos: 8500, fecha: "2024-11-03" },
@@ -13,30 +11,41 @@ const arrayPartidas = [
   { avatar: "🦖", nick: "DinoDestroyer", puntos: 3120, fecha: "2024-11-14" },
 ];
 
+// Funció que pinta la taula amb les dades rebudes
+export function pintarTabla(arrayPartidas) {
+  let html = `
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Avatar</th>
+                            <th>Nick</th>
+                            <th>Punts</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
 
+  // Generar les files a partir de les dades de l'array
+  for (let i = 0; i < partidas.length; i++) {
+    html += `
+                    <tr>
+                        <td>${partidas[i].avatar}</td>
+                        <td>${partidas[i].nick}</td>
+                        <td>${partidas[i].punts}</td>
+                        <td>${partidas[i].data}</td>
+                    </tr>
+                `;
+  }
 
-export function partidas() {
-  console.log('ejecutando partidas')
-  let tabla = `
-    <table>
-    
-      <tbody>
- 
-</tbody>;
-    </table>
-  `;
-  return `
-    <h1>partidas</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, accusamus voluptatibus doloremque minus nemo laboriosam ipsum porro. Earum tempora maiores expedita qui cum enim, odit pariatur, ullam illo, repellat corrupti?</p>
+  html += `
+                    </tbody>
+                </table>
+            `;
 
-    ${tabla};
-  `;
+  // Mostra el codi HTML per consola
+  console.log(html);
+
+  // Injectar el codi HTML generat al div amb id="partidas"
+  document.querySelector("#partidas").innerHTML = html;
 }
-
-
-
-
-
-
-
-

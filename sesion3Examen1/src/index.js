@@ -3,12 +3,15 @@ import { menu } from "./componentes/menu.js";
 import { header } from "./componentes/header.js";
 import { home } from "./vistas/home.js";
 import { about } from "./vistas/about.js";
-import { partidas } from "./vistas/partidas.js";
+import { pintarTabla } from "./vistas/partidas.js";
 
 function app() {
   return `
     ${header()}
    <div id="vistas">
+   </div>
+   <div id="partidas">
+    
    </div>
   `;
 }
@@ -26,7 +29,7 @@ document.querySelector("#btn-about").addEventListener("click", function () {
 });
 
 document.querySelector("#btn-partidas").addEventListener("click", function () {
-  document.querySelector("#vistas").innerHTML = partidas();
+  document.querySelector("#vistas").innerHTML = pintarTabla();
 });
 
 
