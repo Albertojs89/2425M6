@@ -26,24 +26,6 @@ export function pintarTabla() {
                 `;
   }
 
-  // Injectar el codi HTML generat al div amb id="partidas"
-  document.querySelector("#partidas").innerHTML = filas;
-}
-
-export function tabla(){
-  miTabla = `
-     <table>
-                    <thead>
-                        <tr>
-                            <th>Avatar</th>
-                            <th>Nick</th>
-                            <th>Punts</th>
-                            <th>Data</th>
-                        </tr>
-                    </thead>
-                    <tbody> 
-                    ${pintarTabla()} 
-                    </tbody>
-    </table>  
-  `;
+  
+  
 }

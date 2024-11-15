@@ -4,6 +4,7 @@ import { header } from "./componentes/header.js";
 import { home } from "./vistas/home.js";
 import { about } from "./vistas/about.js";
 import { tabla } from "./vistas/partidas.js";
+import { pintarTabla } from "./vistas/partidas.js";
 
 function app() {
   return `
