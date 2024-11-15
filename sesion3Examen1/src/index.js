@@ -3,7 +3,7 @@ import { menu } from "./componentes/menu.js";
 import { header } from "./componentes/header.js";
 import { home } from "./vistas/home.js";
 import { about } from "./vistas/about.js";
-import { pintarTabla } from "./vistas/partidas.js";
+import { tabla } from "./vistas/partidas.js";
 
 function app() {
   return `
@@ -11,7 +11,7 @@ function app() {
    <div id="vistas">
    </div>
    <div id="partidas">
-    
+                
    </div>
   `;
 }
@@ -29,7 +29,7 @@ document.querySelector("#btn-about").addEventListener("click", function () {
 });
 
 document.querySelector("#btn-partidas").addEventListener("click", function () {
-  document.querySelector("#vistas").innerHTML = pintarTabla();
+  document.querySelector("#partidas").innerHTML = tabla();
 });
 
 

@@ -12,9 +12,27 @@ const arrayPartidas = [
 ];
 
 // Funció que pinta la taula amb les dades rebudes
-export function pintarTabla(arrayPartidas) {
-  let html = `
-                <table border="1" cellpadding="8" cellspacing="0">
+export function pintarTabla() {
+  // Generar les files a partir de les dades de l'array
+  let filas=" ";
+  for (let i = 0; i < arrayPartidas.length; i++) {
+    filas += `
+                    <tr>
+                        <td>${arrayPartidas[i].avatar}</td>
+                        <td>${arrayPartidas[i].nick}</td>
+                        <td>${arrayPartidas[i].punts}</td>
+                        <td>${arrayPartidas[i].data}</td>
+                    </tr>
+                `;
+  }
+
+  // Injectar el codi HTML generat al div amb id="partidas"
+  document.querySelector("#partidas").innerHTML = filas;
+}
+
+export function tabla(){
+  miTabla = `
+     <table>
                     <thead>
                         <tr>
                             <th>Avatar</th>
@@ -23,29 +41,9 @@ export function pintarTabla(arrayPartidas) {
                             <th>Data</th>
                         </tr>
                     </thead>
-                    <tbody>
-            `;
-
-  // Generar les files a partir de les dades de l'array
-  for (let i = 0; i < partidas.length; i++) {
-    html += `
-                    <tr>
-                        <td>${partidas[i].avatar}</td>
-                        <td>${partidas[i].nick}</td>
-                        <td>${partidas[i].punts}</td>
-                        <td>${partidas[i].data}</td>
-                    </tr>
-                `;
-  }
-
-  html += `
+                    <tbody> 
+                    ${pintarTabla()} 
                     </tbody>
-                </table>
-            `;
-
-  // Mostra el codi HTML per consola
-  console.log(html);
-
-  // Injectar el codi HTML generat al div amb id="partidas"
-  document.querySelector("#partidas").innerHTML = html;
+    </table>  
+  `;
 }
